@@ -21,3 +21,6 @@
 /core_frontend/npm-debug.log*
 /core_frontend/yarn-debug.log*
 /core_frontend/yarn-error.log*
+
+db.sqlite3
+.gitignore
