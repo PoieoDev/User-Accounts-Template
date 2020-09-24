@@ -4,8 +4,10 @@ function RegistrationForm (props) {
 
     return(
         <div class="form-container-2">
+
         <h3>Register As User</h3>
-          <p className="error-text">{props.errorText}</p>
+        <p className="error-text">{props.errorText}</p>
+
         <form class="form" onSubmit={props.handleRegister}>
           <label class="form-label">First Name</label>
           <input class="form-input" type="text" data-test="firstName" value={props.firstName} onChange={(e) => props.setFirstName(e.target.value)} />
@@ -20,10 +22,10 @@ function RegistrationForm (props) {
           <input class="form-input" type="password" data-test="password" value={props.password} onChange={(e) => props.setPassword(e.target.value)} />
           <label class="form-label">Confirm Password</label>
           <input class="form-input" type="password" data-test="password" value={props.confirmPassword} onChange={(e) => props.setConfirmPassword(e.target.value)} />
+
           <input class="form-button" type="submit" value="Register" data-test="submit" />
         </form>
       </div>
-
   );
 }
 
