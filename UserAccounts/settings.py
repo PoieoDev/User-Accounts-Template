@@ -146,5 +146,5 @@ JWT_AUTH = {
     # how long the original token is valid for
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=3),
     # allow refreshing of tokens
-    'JWT_ALLOW_REFRESH': False,
+    'JWT_ALLOW_REFRESH': True,
 }

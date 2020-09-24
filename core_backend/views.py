@@ -14,9 +14,9 @@ class UserAccountView(APIView):
 
         if serializer.is_valid(raise_exception=False):
             serializer.save()
-            return Response({"user":serializer.data}, status=status.HTTP_201_CREATED)
+            return Response({"user":serializer.data}, status=201)
 
-        return Response({"user": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"user": serializer.errors}, status=400)
 
     # This function will be added soon. Use this function to update
     # a user object via serializer:
@@ -50,7 +50,7 @@ class UserLoginView(APIView):
                     'first_name': user.first_name,
                     }, status=200)
 
-        return Response({"msg": 'Unable to log in with provided credentials.'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"msg": 'Unable to log in with provided credentials.'}, status=400)
 
     # This function uses the same serializer as above but instead of
     # creating a new user object, it verifies the user via JWT token
